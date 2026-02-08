@@ -1,0 +1,12 @@
+
+export interface ServiceItem {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface NavItem {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+}
