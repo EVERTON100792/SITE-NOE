@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const PracticalSupport: React.FC = () => {
   const [activeTab, setActiveTab] = useState('abrir');
+  const whatsappUrl = "https://wa.me/5543991320453?text=Olá, estava navegando no site e gostaria de iniciar uma consultoria.";
 
   const content = {
     abrir: {
@@ -128,10 +129,15 @@ const PracticalSupport: React.FC = () => {
                 </div>
               ))}
             </div>
-            <button className="w-full bg-blue-900 text-white py-4 sm:py-5 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg hover:bg-blue-800 transition-all shadow-xl shadow-blue-900/20 flex items-center justify-center gap-2 group">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-blue-900 text-white py-4 sm:py-5 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg hover:bg-blue-800 transition-all shadow-xl shadow-blue-900/20 flex items-center justify-center gap-2 group"
+            >
               Iniciar Consultoria
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

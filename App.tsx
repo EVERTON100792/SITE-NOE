@@ -8,7 +8,7 @@ import PracticalSupport from './components/PracticalSupport';
 import IRPFHighlight from './components/IRPFHighlight';
 import Portfolio from './components/Portfolio';
 import Differentials from './components/Differentials';
-import LocationMap from './components/LocationMap';
+
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 
@@ -45,9 +45,7 @@ const App: React.FC = () => {
           <Portfolio />
         </section>
 
-        <section id="localizacao">
-          <LocationMap />
-        </section>
+
       </main>
       <Footer />
       <FloatingWhatsApp />

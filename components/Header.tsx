@@ -39,6 +39,7 @@ const Header: React.FC = () => {
   };
 
   const navItems = [
+    { label: 'Sobre Mim', href: '#sobre' },
     {
       label: 'Serviços',
       href: '#servicos',
@@ -49,8 +50,7 @@ const Header: React.FC = () => {
         { label: 'Terceirização Adm', href: '#terceirizacao' }
       ]
     },
-    { label: 'Diferenciais', href: '#diferenciais' },
-    { label: 'Sobre Mim', href: '#sobre' },
+    { label: 'Diferenciais', href: '#diferenciais' }
   ];
 
   return (
@@ -71,16 +71,16 @@ const Header: React.FC = () => {
           {/* Logo ND CONTABILIDADE */}
           <div className="flex items-center gap-3 filter drop-shadow-sm hover:drop-shadow-md transition-all cursor-pointer group">
             <div className="flex flex-col items-center transform group-hover:scale-105 transition-transform">
-              <div className="relative flex items-center justify-center h-10 w-12">
-                <span className="text-4xl font-serif font-bold text-slate-900 absolute -translate-x-1.5 group-hover:-translate-x-2 transition-transform">N</span>
-                <span className="text-4xl font-serif font-bold text-slate-900 absolute translate-x-1.5 translate-y-0.5 group-hover:translate-x-2 transition-transform">D</span>
+              <div className="relative flex items-center justify-center h-12 w-20">
+                <span className="text-5xl font-serif font-bold text-slate-900 absolute -translate-x-4 group-hover:-translate-x-5 transition-transform">N</span>
+                <span className="text-5xl font-serif font-bold text-slate-900 absolute translate-x-4 translate-y-0.5 group-hover:translate-x-5 transition-transform">D</span>
               </div>
-              <span className="text-[7px] tracking-[0.15em] font-black text-slate-700 mt-1 border-t border-slate-900 pt-0.5 leading-none uppercase">Contabilidade</span>
+              <span className="text-[8px] tracking-[0.2em] font-black text-slate-700 mt-2 border-t border-slate-900 pt-0.5 leading-none uppercase">Contabilidade</span>
             </div>
-            <div className="h-10 w-px bg-slate-200 mx-2 hidden sm:block"></div>
-            <div className="flex flex-col opacity-0 sm:opacity-100 transition-opacity">
-              <span className="font-bold text-slate-900 text-base leading-tight">NOERLIS GARCIA</span>
-              <span className="text-slate-500 font-medium text-[10px] tracking-widest uppercase">CONTADORA</span>
+            <div className="h-10 w-px bg-slate-200 mx-2"></div>
+            <div className="flex flex-col">
+              <span className="font-bold text-slate-900 text-sm sm:text-base leading-tight">NOERLIS GARCIA</span>
+              <span className="text-slate-500 font-medium text-[8px] sm:text-[10px] tracking-widest uppercase">CONTADORA</span>
             </div>
           </div>
 
@@ -126,32 +126,38 @@ const Header: React.FC = () => {
 
           {/* CTA & Profile */}
           <div className="hidden md:flex items-center space-x-6">
-            <a href="tel:43991320453" className="text-slate-700 hover:text-blue-900 font-bold text-sm transition-colors flex items-center gap-2 group">
+            <a href="tel:4337723887" className="text-slate-700 hover:text-blue-900 font-bold text-sm transition-colors flex items-center gap-2 group">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
               </span>
-              (43) 99132-0453
+              (43) 3772-3887
             </a>
             <a
               href={whatsappProposta}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-slate-900 text-white px-7 py-3 rounded-md font-medium hover:bg-blue-900 transition-all shadow-lg hover:shadow-blue-900/20 hover:-translate-y-0.5 flex items-center gap-2 group overflow-hidden relative"
+              className="bg-slate-900 text-amber-500 px-7 py-3 rounded-md font-bold hover:shadow-lg hover:shadow-amber-500/10 transition-all hover:-translate-y-0.5 flex items-center gap-2 group overflow-hidden relative border border-amber-500/30"
             >
-              <span className="relative z-10">Solicitar Contato</span>
-              <Send size={16} className="text-blue-200 relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-slate-900 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute inset-0 bg-blue-900/40 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+              <span className="relative z-10 flex items-center gap-2">
+                <span className="bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded text-[10px] tracking-wider uppercase border border-amber-500/20">IRPF 2026</span>
+                Declare seu IR Agora
+              </span>
+              <Send size={16} className="text-amber-500 relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center z-50">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-emerald-900 hover:bg-emerald-50 p-2 rounded-full transition-colors"
+              className="relative w-12 h-12 flex flex-col items-center justify-center gap-[6px] focus:outline-none p-2 rounded-full hover:bg-slate-100/80 transition-colors group"
+              aria-label="Menu"
             >
-              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              <span className={`block h-[2px] bg-slate-800 rounded-full transition-all duration-300 ease-out origin-center ${isMenuOpen ? 'w-6 rotate-45 translate-y-[8px]' : 'w-6'}`}></span>
+              <span className={`block h-[2px] bg-slate-800 rounded-full transition-all duration-300 ease-out origin-center ${isMenuOpen ? 'w-0 opacity-0' : 'w-6'}`}></span>
+              <span className={`block h-[2px] bg-slate-800 rounded-full transition-all duration-300 ease-out origin-center ${isMenuOpen ? 'w-6 -rotate-45 -translate-y-[8px]' : 'w-4 group-hover:w-6'}`}></span>
             </button>
           </div>
         </div>
@@ -177,12 +183,17 @@ const Header: React.FC = () => {
                 href={whatsappProposta}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-emerald-950 text-white py-4 rounded-2xl font-bold text-lg shadow-xl shadow-emerald-900/20 flex items-center justify-center gap-2 active:scale-95 transition-transform"
+                className="w-full bg-slate-900 text-amber-500 py-4 rounded-2xl font-bold text-lg shadow-xl shadow-slate-900/10 flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform border border-amber-500/30 relative overflow-hidden"
               >
-                Solicitar Contato <Send size={18} className="text-amber-500" />
+                <div className="absolute inset-0 bg-blue-900/40 translate-y-full hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                <span className="flex items-center gap-2 relative z-10">
+                  <span className="bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded text-[10px] tracking-wider uppercase border border-amber-500/20 hidden sm:inline-block">IRPF 2026</span>
+                  Declare seu IR Agora <Send size={18} className="text-amber-500" />
+                </span>
+                <span className="text-[10px] tracking-wider uppercase font-medium text-amber-500/80 relative z-10 sm:hidden">Imposto de Renda 2026</span>
               </a>
-              <a href="tel:43991320453" className="block text-center font-bold text-emerald-900 py-3 hover:text-amber-600 transition-colors">
-                Ligar Agora: (43) 99132-0453
+              <a href="tel:4337723887" className="block text-center font-bold text-emerald-900 py-3 hover:text-amber-600 transition-colors">
+                Ligar Agora: (43) 3772-3887
               </a>
             </div>
           </div>

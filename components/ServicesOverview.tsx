@@ -20,7 +20,7 @@ const ServicesOverview: React.FC = () => {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-50 rounded-lg flex items-center justify-center text-blue-900">
                 <Landmark size={28} className="sm:w-8 sm:h-8" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 leading-tight">O essencial da sua <br /><span className="text-blue-900">Gestão Contábil</span></h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">O essencial da sua <br /><span className="text-blue-900">Gestão Contábil</span></h2>
             </div>
 
             <ul className="space-y-4 sm:space-y-6">

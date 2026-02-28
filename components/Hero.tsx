@@ -44,9 +44,9 @@ const Hero: React.FC = () => {
             Noerlis DRF Garcia • Contabilidade Consultiva
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-8 tracking-tight">
             Gestão Contábil <br className="hidden sm:block" />
-            <span className="relative inline-block text-slate-700">
+            <span className="relative inline-block text-slate-700 mt-2">
               de Excelência
               <svg className="absolute w-full h-3 -bottom-1 left-0 text-blue-900/20" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-slate-900 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </a>
 
-            <a href="tel:43991320453" className="border border-slate-200 text-slate-700 px-8 py-4 sm:px-10 sm:py-5 rounded-md font-medium text-base sm:text-lg hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center justify-center gap-2">
+            <a href="https://wa.me/5543991320453" target="_blank" rel="noopener noreferrer" className="border border-slate-200 text-slate-700 px-8 py-4 sm:px-10 sm:py-5 rounded-md font-medium text-base sm:text-lg hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center justify-center gap-2">
               <Phone size={20} />
               (43) 99132-0453
             </a>
@@ -109,31 +109,6 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Floating Premium Card - Changed from 'Portal do Cliente' to 'Economia Tributária' */}
-          <div
-            className="absolute -bottom-8 -left-8 z-20 bg-white/95 backdrop-blur-xl p-6 rounded-lg shadow-xl border border-slate-100 max-w-[260px] animate-float hidden sm:block"
-            style={{ animation: 'float 6s ease-in-out infinite' }}
-          >
-            <div className="flex items-center gap-4 mb-3">
-              <div className="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center text-green-600">
-                <TrendingUp size={20} />
-              </div>
-              <div>
-                <p className="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Foco no Lucro</p>
-                <p className="text-sm font-bold text-slate-900">Economia Tributária</p>
-              </div>
-            </div>
-            {/* Fake Chart Line */}
-            <div className="h-8 w-full flex items-end justify-between gap-1 mt-2 px-1">
-              <div className="w-[10%] bg-blue-100 h-[30%] rounded-t-sm"></div>
-              <div className="w-[10%] bg-blue-100 h-[45%] rounded-t-sm"></div>
-              <div className="w-[10%] bg-blue-200 h-[40%] rounded-t-sm"></div>
-              <div className="w-[10%] bg-blue-300 h-[60%] rounded-t-sm"></div>
-              <div className="w-[10%] bg-blue-400 h-[55%] rounded-t-sm"></div>
-              <div className="w-[10%] bg-blue-500 h-[75%] rounded-t-sm"></div>
-              <div className="w-[10%] bg-blue-600 h-[90%] rounded-t-sm"></div>
-            </div>
-          </div>
 
           <style>{`
             @keyframes float {

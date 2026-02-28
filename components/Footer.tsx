@@ -11,11 +11,11 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center sm:items-start space-y-6">
             <div className="flex items-center gap-3">
               <div className="flex flex-col items-center">
-                <div className="relative flex items-center justify-center h-10 w-12">
-                  <span className="text-4xl font-serif font-bold text-white absolute -translate-x-1.5">N</span>
-                  <span className="text-4xl font-serif font-bold text-white absolute translate-x-1.5 translate-y-0.5">D</span>
+                <div className="relative flex items-center justify-center h-12 w-20">
+                  <span className="text-5xl font-serif font-bold text-white absolute -translate-x-4">N</span>
+                  <span className="text-5xl font-serif font-bold text-white absolute translate-x-4 translate-y-0.5">D</span>
                 </div>
-                <span className="text-[7px] tracking-[0.15em] font-black text-white mt-1 border-t border-white pt-0.5 leading-none uppercase">Contabilidade</span>
+                <span className="text-[8px] tracking-[0.2em] font-black text-white mt-2 border-t border-white pt-0.5 leading-none uppercase">Contabilidade</span>
               </div>
               <div className="h-10 w-px bg-slate-800 mx-2 hidden sm:block"></div>
               <div className="flex flex-col text-left">
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-5 text-slate-400">
               <li className="flex flex-col">
                 <span className="text-blue-400 font-bold text-[9px] uppercase tracking-widest mb-1">WhatsApp Business</span>
-                <a href="tel:43991320453" className="hover:text-white transition-colors text-lg font-bold">(43) 99132-0453</a>
+                <a href="https://wa.me/5543991320453" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-lg font-bold">(43) 99132-0453</a>
               </li>
               <li className="flex flex-col">
                 <span className="text-blue-400 font-bold text-[9px] uppercase tracking-widest mb-1">E-mail Profissional</span>

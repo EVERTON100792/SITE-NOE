@@ -5,22 +5,22 @@ import { Users, MessageSquare, PhoneCall, CalendarCheck, CheckCircle2 } from 'lu
 const Differentials: React.FC = () => {
   const items = [
     {
-      icon: <Users size={24} className="text-blue-600" />,
+      icon: <Users size={24} className="text-blue-500" />,
       title: "Equipe especializada no seu negócio",
       desc: "Conhecemos os desafios do seu setor para oferecer soluções sob medida."
     },
     {
-      icon: <MessageSquare size={24} className="text-blue-600" />,
+      icon: <MessageSquare size={24} className="text-blue-500" />,
       title: "WhatsApp para agilidade no atendimento",
       desc: "Respostas rápidas e comunicação fluida, sem burocracias desnecessárias."
     },
     {
-      icon: <PhoneCall size={24} className="text-blue-600" />,
+      icon: <PhoneCall size={24} className="text-blue-500" />,
       title: "Telefone para falar com nossos especialistas",
       desc: "Atendimento direto e humano sempre que precisar."
     },
     {
-      icon: <CalendarCheck size={24} className="text-blue-600" />,
+      icon: <CalendarCheck size={24} className="text-blue-500" />,
       title: "Reuniões agendadas no seu estabelecimento",
       desc: "Valorizamos a proximidade. Conversaremos pessoalmente onde seu negócio acontece."
     }
@@ -32,29 +32,29 @@ const Differentials: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-stretch">
 
           {/* Lado Esquerdo - Título */}
-          <div className="lg:w-[40%] p-8 sm:p-12 lg:p-20 flex flex-col justify-center items-center lg:items-start text-center lg:text-left bg-gradient-to-br from-blue-700 to-blue-900">
-            <div className="w-20 h-20 sm:w-28 sm:h-28 bg-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-8 sm:mb-10 shadow-inner border border-blue-500">
+          <div className="lg:w-1/3 p-6 sm:p-10 lg:p-12 flex flex-col justify-center items-center lg:items-start text-center lg:text-left bg-slate-900 border-r border-slate-800">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-slate-800 rounded-xl sm:rounded-2xl flex items-center justify-center mb-6 sm:mb-8 shadow-inner border border-slate-700">
               <div className="relative">
-                <Users size={36} className="text-white/90 sm:w-12 sm:h-12" />
-                <div className="absolute -bottom-1 -right-1 bg-white rounded-full p-1 border-2 border-blue-700">
-                  <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-white rounded-full"></div>
+                <Users size={32} className="text-blue-400 sm:w-10 sm:h-10" />
+                <div className="absolute -bottom-1 -right-1 bg-white rounded-full p-1 border-2 border-slate-800">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
                 </div>
               </div>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight mb-4">
               Atendimento<br />
-              <span className="text-blue-300">Diferenciado</span>
+              <span className="text-blue-400">Diferenciado</span>
             </h2>
-            <div className="w-12 sm:w-16 h-1 sm:h-1.5 bg-white rounded-full"></div>
+            <div className="w-12 h-1 bg-blue-500 rounded-full"></div>
           </div>
 
           {/* Lado Direito - Lista */}
-          <div className="lg:w-[60%] p-6 sm:p-12 lg:p-20 space-y-8 sm:space-y-10 bg-white">
+          <div className="lg:w-2/3 p-6 sm:p-10 lg:p-12 space-y-6 sm:space-y-8 bg-white">
             {items.map((item, idx) => (
               <div key={idx} className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-6 group">
-                <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-blue-50 rounded-lg sm:rounded-xl flex items-center justify-center border border-blue-100 group-hover:bg-blue-600 transition-all shadow-lg">
-                  <div className="text-blue-600 group-hover:text-white transition-colors">{item.icon}</div>
+                <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-slate-50 rounded-lg sm:rounded-xl flex items-center justify-center border border-slate-200 group-hover:bg-slate-900 group-hover:border-slate-800 transition-all shadow-sm group-hover:shadow-md">
+                  <div className="text-slate-700 group-hover:text-blue-400 transition-colors">{item.icon}</div>
                 </div>
                 <div className="pt-0 sm:pt-1">
                   <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
