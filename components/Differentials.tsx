@@ -27,7 +27,7 @@ const Differentials: React.FC = () => {
   ];
 
   return (
-    <div id="diferenciais" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
+    <div id="diferenciais" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
       <div className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative border border-slate-100">
         <div className="flex flex-col lg:flex-row items-stretch">
 

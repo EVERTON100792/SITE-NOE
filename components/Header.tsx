@@ -126,10 +126,9 @@ const Header: React.FC = () => {
 
           {/* CTA & Profile */}
           <div className="hidden md:flex items-center space-x-6">
-            <a href="tel:4337723887" className="text-slate-700 hover:text-blue-900 font-bold text-sm transition-colors flex items-center gap-2 group">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            <a href="tel:4337723887" className="text-slate-700 hover:text-slate-900 font-bold text-sm transition-colors flex items-center gap-2 group">
+              <span className="flex items-center justify-center w-5 h-5 bg-green-100 rounded-full group-hover:bg-green-200 transition-colors">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
               </span>
               (43) 3772-3887
             </a>
@@ -192,8 +191,11 @@ const Header: React.FC = () => {
                 </span>
                 <span className="text-[10px] tracking-wider uppercase font-medium text-amber-500/80 relative z-10 sm:hidden">Imposto de Renda 2026</span>
               </a>
-              <a href="tel:4337723887" className="block text-center font-bold text-emerald-900 py-3 hover:text-amber-600 transition-colors">
-                Ligar Agora: (43) 3772-3887
+              <a href="tel:4337723887" className="flex items-center justify-center gap-2 text-center font-bold text-slate-800 py-3 hover:text-blue-800 transition-colors">
+                <span className="flex items-center justify-center w-5 h-5 bg-green-100 rounded-full">
+                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                </span>
+                (43) 3772-3887
               </a>
             </div>
           </div>

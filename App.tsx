@@ -21,15 +21,15 @@ const App: React.FC = () => {
           <Hero />
         </section>
 
-        <section id="diferenciais">
+        <section id="diferenciais" className="scroll-mt-24">
           <Differentials />
         </section>
 
-        <section id="irpf" className="bg-emerald-50/30">
+        <section id="irpf" className="bg-emerald-50/30 scroll-mt-24">
           <IRPFHighlight />
         </section>
 
-        <section id="servicos" className="py-24">
+        <section id="servicos" className="py-12 sm:py-16 scroll-mt-24">
           <ServicesOverview />
         </section>
 
@@ -37,11 +37,11 @@ const App: React.FC = () => {
           <ServiceDetails />
         </section>
 
-        <section id="como-funciona" className="bg-slate-50 py-24">
+        <section id="como-funciona" className="bg-slate-50 py-12 sm:py-16 scroll-mt-24">
           <PracticalSupport />
         </section>
 
-        <section id="sobre" className="py-24 bg-white">
+        <section id="sobre" className="py-12 sm:py-16 bg-white scroll-mt-24">
           <Portfolio />
         </section>
 

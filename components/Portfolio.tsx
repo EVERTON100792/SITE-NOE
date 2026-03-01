@@ -1,19 +1,34 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Award, Briefcase, GraduationCap, Phone, Mail, Instagram, CameraOff } from 'lucide-react';
 
 const Portfolio: React.FC = () => {
+  const images = ['/perfil.png', '/perfil2.png'];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Crossfade every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
         {/* Placeholder Imagem (Mais limpo e elegante) */}
         <div className="w-full lg:w-[35%] xl:w-[40%] relative max-w-md lg:max-w-none mx-auto lg:mx-0">
-          <div className="relative z-10 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-50 w-full aspect-[4/5] flex flex-col items-center justify-center p-8 text-center group transition-all hover:bg-slate-100/50 object-cover lg:ml-auto">
-            <div className="w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center mb-4 text-slate-400 group-hover:scale-110 transition-transform">
-              <CameraOff size={32} />
-            </div>
-            <h4 className="text-slate-900 font-bold text-base mb-1">Imagem Profissional</h4>
-            <p className="text-slate-400 text-[10px] font-medium uppercase tracking-widest">Em Desenvolvimento</p>
+          <div className="relative z-10 rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-50 w-full aspect-[4/5] flex items-center justify-center group transition-all lg:ml-auto">
+            {images.map((src, index) => (
+              <img
+                key={src}
+                src={src}
+                alt={`Noerlis D.R.F. Garcia - Perfil Profissional ${index + 1}`}
+                className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] ease-in-out group-hover:scale-105 ${currentImageIndex === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  }`}
+              />
+            ))}
           </div>
 
           {/* O bloco de respiro/testemunho pequeno */}
