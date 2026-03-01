@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
   const { ref: heroRef, style: heroStyle } = useScrollReveal({ threshold: 0.0, delay: 100 });
   const { ref: imageRef, style: imageStyle } = useScrollReveal({ direction: 'left', delay: 300 });
   return (
-    <div className="relative pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-12 lg:pb-16 overflow-hidden bg-white flex flex-col justify-center">
+    <div className="relative pt-[100px] sm:pt-[104px] lg:pt-[110px] pb-8 sm:pb-12 lg:pb-16 overflow-hidden bg-white flex flex-col justify-center">
       {/* Dynamic Background */}
       <div
         className="absolute top-0 right-0 -z-10 w-full lg:w-1/2 h-full bg-slate-50 rounded-none transform skew-x-[-12deg] origin-top right-[-10%] transition-transform duration-100 ease-out will-change-transform"
