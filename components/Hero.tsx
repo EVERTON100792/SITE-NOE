@@ -9,6 +9,11 @@ const Hero: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const heroImages = ['/escritorio.png', '/perfil03.jpeg'];
   const [currentHeroImg, setCurrentHeroImg] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
+
+  const handleImageLoad = (src: string) => {
+    setLoadedImages((prev) => ({ ...prev, [src]: true }));
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -121,7 +126,8 @@ const Hero: React.FC = () => {
                 loading={idx === 0 ? 'eager' : 'lazy'}
                 fetchPriority={idx === 0 ? 'high' : 'low'}
                 decoding="async"
-                className={`absolute inset-0 w-full h-full object-cover object-center transition-all duration-[2000ms] ease-in-out ${currentHeroImg === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                onLoad={() => handleImageLoad(src)}
+                className={`absolute inset-0 w-full h-full object-cover object-center transition-all duration-[2000ms] ease-in-out ${currentHeroImg === idx && loadedImages[src] ? 'opacity-100 z-10' : 'opacity-0 z-0'
                   }`}
               />
             ))}

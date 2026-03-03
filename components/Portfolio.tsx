@@ -5,6 +5,11 @@ import { Award, Briefcase, GraduationCap, Phone, Mail, Instagram, CameraOff } fr
 const Portfolio: React.FC = () => {
   const images = ['/perfil.png', '/perfil2.png'];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
+
+  const handleImageLoad = (src: string) => {
+    setLoadedImages((prev) => ({ ...prev, [src]: true }));
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,7 +33,8 @@ const Portfolio: React.FC = () => {
                 loading={index === 0 ? 'eager' : 'lazy'}
                 fetchPriority={index === 0 ? 'high' : 'low'}
                 decoding="async"
-                className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] ease-in-out group-hover:scale-105 ${currentImageIndex === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                onLoad={() => handleImageLoad(src)}
+                className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] ease-in-out group-hover:scale-105 ${currentImageIndex === index && loadedImages[src] ? 'opacity-100 z-10' : 'opacity-0 z-0'
                   }`}
               />
             ))}
