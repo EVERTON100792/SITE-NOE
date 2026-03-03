@@ -25,6 +25,9 @@ const Portfolio: React.FC = () => {
                 key={src}
                 src={src}
                 alt={`Noerlis D.R.F. Garcia - Perfil Profissional ${index + 1}`}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                fetchPriority={index === 0 ? 'high' : 'low'}
+                decoding="async"
                 className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] ease-in-out group-hover:scale-105 ${currentImageIndex === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
                   }`}
               />

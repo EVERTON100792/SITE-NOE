@@ -118,6 +118,9 @@ const Hero: React.FC = () => {
                 key={src}
                 src={src}
                 alt={`Escritório de Contabilidade - Ambiente Profissional ${idx + 1}`}
+                loading={idx === 0 ? 'eager' : 'lazy'}
+                fetchPriority={idx === 0 ? 'high' : 'low'}
+                decoding="async"
                 className={`absolute inset-0 w-full h-full object-cover object-center transition-all duration-[2000ms] ease-in-out ${currentHeroImg === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'
                   }`}
               />
