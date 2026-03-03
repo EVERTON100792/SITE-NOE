@@ -3,7 +3,7 @@ import React from 'react';
 import { Calendar, FileText, TrendingUp, HelpCircle, Flame, Clock, ShieldCheck } from 'lucide-react';
 
 const IRPFHighlight: React.FC = () => {
-  const whatsappUrl = "https://wa.me/5543991320453?text=Olá Noerlis, gostaria de garantir minha vaga para a declaração do IRPF 2025-2026.";
+  const whatsappUrl = "https://wa.me/5543991320453?text=Olá Noerlis, gostaria de fazer minha declaração de imposto de renda";
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">

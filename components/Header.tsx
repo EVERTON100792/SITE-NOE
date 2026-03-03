@@ -10,6 +10,7 @@ const Header: React.FC = () => {
   const closeTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
   const whatsappProposta = "https://wa.me/5543991320453?text=Olá Noerlis, gostaria de solicitar um contato para falar sobre minha empresa.";
+  const whatsappIRPF = "https://wa.me/5543991320453?text=Olá Noerlis, gostaria de fazer minha declaração de imposto de renda";
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -133,7 +134,7 @@ const Header: React.FC = () => {
               (43) 3772-3887
             </a>
             <a
-              href={whatsappProposta}
+              href={whatsappIRPF}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-slate-900 text-amber-500 px-7 py-3 rounded-md font-bold hover:shadow-lg hover:shadow-amber-500/10 transition-all hover:-translate-y-0.5 flex items-center gap-2 group overflow-hidden relative border border-amber-500/30"
@@ -179,7 +180,7 @@ const Header: React.FC = () => {
             ))}
             <div className="pt-8 px-2 space-y-4">
               <a
-                href={whatsappProposta}
+                href={whatsappIRPF}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-slate-900 text-amber-500 py-4 rounded-2xl font-bold text-lg shadow-xl shadow-slate-900/10 flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform border border-amber-500/30 relative overflow-hidden"
