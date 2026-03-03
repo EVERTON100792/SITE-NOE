@@ -7,7 +7,7 @@ import StatsCounter from './StatsCounter';
 const Hero: React.FC = () => {
   const whatsappProposta = "https://wa.me/5543991320453?text=Olá Noerlis, gostaria de solicitar um contato para falar sobre minha empresa.";
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const heroImages = ['/escritorio.png', '/escritorio2.jpeg'];
+  const heroImages = ['/escritorio.png', '/perfil03.jpeg'];
   const [currentHeroImg, setCurrentHeroImg] = useState(0);
 
   useEffect(() => {
@@ -109,7 +109,7 @@ const Hero: React.FC = () => {
         {/* Visual Section with Parallax */}
         <div className="flex-1 relative order-1 lg:order-2 w-full max-w-lg lg:max-w-none perspective-1000">
           <div
-            className="relative z-10 rounded-2xl w-full h-[500px] overflow-hidden shadow-2xl shadow-slate-900/20 border-4 border-white ring-1 ring-slate-100 bg-slate-50 transition-transform duration-300 ease-out will-change-transform group"
+            className="relative z-10 rounded-2xl w-full aspect-[3/4] overflow-hidden shadow-2xl shadow-slate-900/20 border-4 border-white ring-1 ring-slate-100 bg-slate-50 transition-transform duration-300 ease-out will-change-transform group"
             style={{ transform: `rotateY(${mousePosition.x * 0.5}deg) rotateX(${mousePosition.y * -0.5}deg)` }}
             ref={imageRef}
           >
@@ -118,14 +118,14 @@ const Hero: React.FC = () => {
                 key={src}
                 src={src}
                 alt={`Escritório de Contabilidade - Ambiente Profissional ${idx + 1}`}
-                className={`absolute inset-0 w-full h-full object-cover contrast-105 saturate-110 transition-all duration-[2000ms] ease-in-out group-hover:scale-105 ${currentHeroImg === idx ? 'opacity-100 z-10 scale-[1.02]' : 'opacity-0 z-0 scale-100'
+                className={`absolute inset-0 w-full h-full object-cover object-center transition-all duration-[2000ms] ease-in-out ${currentHeroImg === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'
                   }`}
               />
             ))}
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-90"></div>
+            <div className="absolute inset-0 z-20 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-90"></div>
 
-            <div className="absolute bottom-8 left-8 right-8 text-white">
+            <div className="absolute bottom-8 left-8 right-8 z-30 text-white">
               <div className="inline-block bg-blue-900 text-white text-[10px] font-bold px-3 py-1.5 rounded mb-3 tracking-wider">PREMIUM OFFICE</div>
               <p className="text-sm font-medium text-slate-100/90 leading-relaxed max-w-sm">
                 Um espaço pensado para o conforto e privacidade das suas decisões estratégicas.
